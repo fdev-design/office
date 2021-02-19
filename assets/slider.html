@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>iws-primetube - Slider Revolution</title>
+			<meta name="description" content="Slider Revolution Example" />
+			<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+			<meta name="author" content="ThemePunch" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- LOAD JQUERY LIBRARY -->
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+			
+			<!-- LOADING FONTS AND ICONS -->
+			<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400%2C600%7CRoboto:400" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+			
+			<link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+			
+			<!-- REVOLUTION STYLE SHEETS -->
+			<link rel="stylesheet" type="text/css" href="css/rs6.css">
+			<!-- REVOLUTION LAYERS STYLES -->
+							<style type="text/css"></style>
+			<!-- REVOLUTION JS FILES -->
+			<script type="text/javascript" src="js/rbtools.min.js"></script>
+			<script type="text/javascript" src="js/rs6.min.js"></script>
+			
+			<script type="text/javascript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {				 
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
+				try {								
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
+					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
+						newh = Math.max(e.mh,window.RSIH);					
+					else{					
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,						
+							sl;					
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script>
+		</head>
+		
+		
+
+			<!-- START iwsprimetube REVOLUTION SLIDER 6.2.22 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_14_1_wrapper" data-alias="iws-primetube" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_14_1" style="" data-version="6.2.22">
+					<rs-slides>
+						<rs-slide data-key="rs-72" data-title="Slide" data-thumb="assets/capillary-tubes-banner-50x100.jpg" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;" data-mediafilter="aden">
+							<img src="assets/capillary-tubes-banner.jpg" alt="Stainless Steel Capillary Tubes" title="Stainless Steel Capillary Tubes" width="1920" height="1024" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-14-slide-72-layer-6" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:0,0,-4px,0;yo:262px,209px,251px,219px;"
+								data-text="w:normal;s:47,37,36,36;l:49,39,40,40;a:center;"
+								data-dim="w:1123px,898px,682px,420px;"
+								data-frame_0="y:-48px,-38px,-28px,-17px;"
+								data-frame_1="sp:1000;"
+								data-frame_999="o:0;st:w;sR:2000;"
+								style="z-index:8;font-family:Titillium Web;"
+							>Manufacturer & Exporter of High Quality Capillary Tubes 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-14-slide-72-layer-20" 
+								data-type="text"
+								data-color="#eff2f4"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:0,0,-15px,-4px;yo:328px,262px,340px,313px;"
+								data-text="w:normal;s:36,28,26,24;l:42,33,28,28;a:left,left,center,center;"
+								data-dim="w:auto,auto,auto,453px;"
+								data-frame_0="sX:2;sY:2;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="e:power2.out;st:560;sp:1000;sR:560;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:1440;"
+								style="z-index:9;font-family:Titillium Web;"
+							>Stainless Steel Capillary Tubes , Inconel / Incoloy Capillary Tubes 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-76" data-title="Slide" data-thumb="assets/coiled-tubes-banner-50x100.jpg" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+							<img src="assets/coiled-tubes-banner.jpg" alt="Coiled Tubes" title="coiled-tubes-banner" width="1920" height="1024" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-14-slide-76-layer-6" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;yo:181px,144px,252px,182px;"
+								data-text="w:normal;s:48,48,48,36;l:50,50,52,38;a:center;"
+								data-dim="w:1069px,952px,723px,446px;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="e:power2.inOut;sp:1000;"
+								data-frame_999="o:0;st:w;sR:2000;"
+								style="z-index:8;font-family:Titillium Web;"
+							>Manufacturer, Distributor, Exporter of Coiled Tubes 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-14-slide-76-layer-24" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;yo:239px,251px,210px,269px;"
+								data-text="w:normal;s:36,28,36,22;l:56,44,33,20;a:center;"
+								data-frame_0="sX:2;sY:2;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="e:power2.out;sp:1000;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:10;font-family:Roboto;"
+							>Stainless Steel, Inconel, Monel, Hastelloy 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-73" data-title="Slide" data-thumb="assets/banner-1-50x100.jpg" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+							<img src="assets/banner-1.jpg" alt="IBR Buttweld Fittings" title="IBR Buttweld Fittings" width="1920" height="1024" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-14-slide-73-layer-6" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:0,0,2px,0;yo:171px,136px,252px,152px;"
+								data-text="w:normal;s:48,48,48,36;l:50,50,52,38;a:center;"
+								data-dim="w:1069px,952px,723px,446px;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="e:power2.inOut;sp:1000;"
+								data-frame_999="o:0;st:w;sR:2000;"
+								style="z-index:8;font-family:Titillium Web;"
+							>Manufacturer, Distributor, Exporter and Supplier of Pipe and Pipe Fittings in a wide range of grades. 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-14-slide-73-layer-8" 
+								data-type="text"
+								data-color="#c9c9c9||#c9c9c9||#c9c9c9||#c7c7cc"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-314px,-316px,-231px,0;yo:316px,311px,446px,330px;"
+								data-text="w:normal;s:36,34,25,30;l:25,36,27,34;fw:600;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="st:340;sp:1300;sR:340;"
+								data-frame_999="o:0;st:w;sR:1360;"
+								style="z-index:12;font-family:Titillium Web;"
+							>Stainless Steel 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-14-slide-73-layer-10" 
+								data-type="text"
+								data-color="#c9c9c9||#c9c9c9||#c9c9c9||#c7c7cc"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-79px,-92px,-67px,0;yo:314px,311px,446px,363px;"
+								data-text="w:normal;s:36,34,25,30;l:25,36,27,34;fw:600;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="e:power2.inOut;st:1250;sp:1000;sR:1250;"
+								data-frame_999="o:0;st:w;sR:750;"
+								style="z-index:11;font-family:Titillium Web;"
+							>Nickel Alloys 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-14-slide-73-layer-11" 
+								data-type="text"
+								data-color="#c9c9c9||#c9c9c9||#c9c9c9||#c7c7cc"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:133px,105px,79px,0;yo:315px,311px,446px,401px;"
+								data-text="w:normal;s:36,34,25,30;l:25,36,27,34;fw:600;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="e:power2.inOut;st:1790;sp:1000;sR:1790;"
+								data-frame_999="o:0;st:w;sR:210;"
+								style="z-index:10;font-family:Titillium Web;"
+							>Alloy Steel 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-14-slide-73-layer-12" 
+								data-type="text"
+								data-color="#c9c9c9||#c9c9c9||#c9c9c9||#c7c7cc"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:360px,301px,230px,0;yo:316px,311px,446px,436px;"
+								data-text="w:normal;s:36,34,25,30;l:25,36,27,34;fw:600;a:left,left,left,center;"
+								data-dim="w:230px,184px,139px,199px;"
+								data-frame_0="x:0,0,0,0px;y:0,0,0,0px;sX:0.9;sY:0.9;"
+								data-frame_1="x:0,0,0,0px;y:0,0,0,0px;e:power2.inOut;st:2000;sp:1000;sR:2000;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:9;font-family:Titillium Web;"
+							>Carbon Steel 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-71" data-title="Slide" data-thumb="assets/s2-50x100.jpg" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;" data-mediafilter="aden">
+							<img src="assets/s2.jpg" title="s2" width="1920" height="1024" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-14-slide-71-layer-6" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-1px,0,0,0;yo:267px,213px,282px,238px;"
+								data-text="w:normal;s:48,46,42,42;l:50,48,44,43;a:center;"
+								data-dim="w:1069px,855px,649px,400px;h:auto,auto,104px,64px;"
+								data-frame_0="y:-50,-40,-30,-18;"
+								data-frame_1="st:550;sp:1000;sR:550;"
+								data-frame_999="o:0;st:w;sR:1450;"
+								style="z-index:8;font-family:Titillium Web;"
+							>ASTM, ASME, IBR, API 5L, DIN, BS, EN, IS,  AMS, JIS & Other Standards 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-14-slide-71-layer-14" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:2px,-8px,0,0;yo:199px,161px,231px,178px;"
+								data-text="w:normal;s:36,36,34,34;l:38,48,42,38;a:center;"
+								data-frame_0="sX:2;sY:2;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="e:power2.out;st:170;sp:1000;sR:170;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:1830;"
+								style="z-index:9;font-family:Titillium Web;"
+							>Exporting Pipes & Tubes  In 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-75" data-title="Slide" data-thumb="assets/banner-9-50x100.jpg" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;" data-mediafilter="aden">
+							<img src="assets/banner-9.jpg" title="banner-9" width="1920" height="1024" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-14-slide-75-layer-6" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:0,0,-4px,0;yo:222px,177px,251px,169px;"
+								data-text="w:normal;s:48,38,36,36;l:50,40,40,40;a:center;"
+								data-dim="w:1069px,855px,649px,400px;"
+								data-frame_0="y:-50,-40,-30,-18;"
+								data-frame_1="sp:1000;"
+								data-frame_999="o:0;st:w;sR:2000;"
+								style="z-index:8;font-family:Titillium Web;"
+							>API 5L Carbon Steel Seamless & ERW Pipes Manufacturer & Exporter 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-14-slide-75-layer-20" 
+								data-type="text"
+								data-color="#eff2f4"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:0,0,-15px,-4px;yo:336px,268px,350px,303px;"
+								data-text="w:normal;s:36,28,26,24;l:42,33,28,28;a:left,left,center,center;"
+								data-dim="w:auto,auto,auto,453px;"
+								data-frame_0="sX:2;sY:2;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="e:power2.out;st:560;sp:1000;sR:560;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:1440;"
+								style="z-index:9;font-family:Titillium Web;"
+							>Your Number One Source for API 5L  Line Pipes 
+							</rs-layer><!--
+-->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+		<script type="text/javascript">
+		if(typeof revslider_showDoubleJqueryError === "undefined") {
+			function revslider_showDoubleJqueryError(sliderID) {
+				var err = "<div class='rs_error_message_box'>";
+				err += "<div class='rs_error_message_oops'>Oops...</div>";
+				err += "<div class='rs_error_message_content'>";
+				err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+				err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+				err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+				err += "</div>";
+			err += "</div>";
+				var slider = document.getElementById(sliderID); slider.innerHTML = err; slider.style.display = "block";
+			}
+		}
+		</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+
+				<script type="text/javascript">
+					
+					var	revapi14,
+						tpj;
+					function revinit_revslider141() {
+					jQuery(function() {
+						tpj = jQuery;
+						revapi14 = tpj("#rev_slider_14_1");
+						if(revapi14==undefined || revapi14.revolution == undefined){
+							revslider_showDoubleJqueryError("rev_slider_14_1");
+						}else{
+							revapi14.revolution({
+								sliderLayout:"fullwidth",
+								duration:"3000ms",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:"1280,1024,778,480",
+								gridheight:"700,700,960,650",
+								spinner:"spinner0",
+								perspective:600,
+								perspectiveType:"global",
+								editorheight:"700,700,960,650",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									onHoverStop:false,
+									arrows: {
+										enable:true,
+										tmp:"<div class=\"tp-arr-allwrapper\">	<div class=\"tp-arr-imgholder\"></div></div>",
+										style:"hades",
+										left: {
+											h_offset:30
+										},
+										right: {
+											h_offset:30
+										}
+									},
+									bullets: {
+										enable:true,
+										tmp:"",
+										style:"hesperiden"
+									}
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+							});
+						}
+						
+					});
+					} // End of RevInitScript
+				var once_revslider141 = false;
+				if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider141 ) { once_revslider141 = true; revinit_revslider141();}});} else {once_revslider141 = true; revinit_revslider141();}
+				</script>
+<!-- STYLE -->				<style type="text/css">#rev_slider_14_1_wrapper .hades.tparrows{cursor:pointer;background:rgba(0,0,0,0.25);width:100px;height:100px;position:absolute;display:block;z-index:1000}#rev_slider_14_1_wrapper .hades.tparrows:before{font-family:'revicons';font-size:30px;color:#ffffff;display:block;line-height:100px;text-align:center; transition:background 0.3s,color 0.3s}#rev_slider_14_1_wrapper .hades.tparrows.tp-leftarrow:before{content:'\e824'}#rev_slider_14_1_wrapper .hades.tparrows.tp-rightarrow:before{content:'\e825'}#rev_slider_14_1_wrapper .hades.tparrows:hover:before{color:rgba(0,0,0,0.5);  background:#ffffff}#rev_slider_14_1_wrapper .hades .tp-arr-allwrapper{position:absolute; left:100%; top:0px; background:#888;  width:100px;height:100px; -webkit-transition:all 0.3s; transition:all 0.3s; -ms-filter:'progid:dximagetransform.microsoft.alpha(opacity=0)'; filter:alpha(opacity=0); -moz-opacity:0.0; -khtml-opacity:0.0; opacity:0.0; -webkit-transform:rotatey(-90deg); transform:rotatey(-90deg); -webkit-transform-origin:0% 50%; transform-origin:0% 50%}#rev_slider_14_1_wrapper .hades.tp-rightarrow .tp-arr-allwrapper{left:auto;  right:100%;  -webkit-transform-origin:100% 50%; transform-origin:100% 50%;  -webkit-transform:rotatey(90deg); transform:rotatey(90deg)}#rev_slider_14_1_wrapper .hades:hover .tp-arr-allwrapper{-ms-filter:'progid:dximagetransform.microsoft.alpha(opacity=100)'; filter:alpha(opacity=100); -moz-opacity:1; -khtml-opacity:1; opacity:1;   -webkit-transform:rotatey(0deg); transform:rotatey(0deg)}#rev_slider_14_1_wrapper .hades .tp-arr-iwrapper{}#rev_slider_14_1_wrapper .hades .tp-arr-imgholder{background-size:cover; position:absolute; top:0px;left:0px; width:100%;height:100%}#rev_slider_14_1_wrapper .hades .tp-arr-titleholder{}#rev_slider_14_1_wrapper .hades .tp-arr-subtitleholder{}#rev_slider_14_1_wrapper .hesperiden.tp-bullets{}#rev_slider_14_1_wrapper .hesperiden.tp-bullets:before{content:' ';position:absolute;width:100%;height:100%;background:transparent;padding:10px;margin-left:-10px;margin-top:-10px;box-sizing:content-box;  border-radius:8px}#rev_slider_14_1_wrapper .hesperiden .tp-bullet{width:12px;height:12px;position:absolute;background:#999999;   background:-moz-linear-gradient(top,#999999 0%,#e1e1e1 100%);   background:-webkit-linear-gradient(top,#999999 0%,#e1e1e1 100%);   background:-o-linear-gradient(top,#999999 0%,#e1e1e1 100%);   background:-ms-linear-gradient(top,#999999 0%,#e1e1e1 100%);   background:linear-gradient(to bottom,#999999 0%,#e1e1e1 100%);   filter:progid:dximagetransform.microsoft.gradient(   startcolorstr='#999999',endcolorstr='#e1e1e1',gradienttype=0 ); border:3px solid #e5e5e5;border-radius:50%;cursor:pointer;box-sizing:content-box}#rev_slider_14_1_wrapper .hesperiden .tp-bullet:hover,#rev_slider_14_1_wrapper .hesperiden .tp-bullet.selected{background:#666666}#rev_slider_14_1_wrapper .hesperiden .tp-bullet-image{}#rev_slider_14_1_wrapper .hesperiden .tp-bullet-title{}</style><!-- /STYLE -->
+
+		<body>
+					</body>
+		
+		</html>
+		
